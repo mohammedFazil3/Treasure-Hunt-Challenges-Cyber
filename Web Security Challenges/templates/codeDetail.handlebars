@@ -1,0 +1,59 @@
+<style>
+    table{
+        border:2px solid black;
+        border-collapse: collapse;
+    }
+    th,td{
+        border:2px solid black;
+    }
+    th{
+        text-align: left;
+    }
+    input{
+        background-color: #c0f7a8;
+        color: #363735;
+        font-weight: bold;
+        letter-spacing: 0cm;
+    }
+    .button {
+    background-color: #c0f7a8;
+    padding: 1px;
+    padding-right: 6px;
+    padding-left: 6px;
+    border: 1px solid #000;
+    color: #363735;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    }
+</style>
+<body>
+    {{#if message}}
+    <div>flag{ctf_901}</div>
+    {{/if}}
+    <h1 style="font-size:200%">Course Details</h1>
+    <table>
+        {{#each course}}
+            <tr><th>Course Code:</th><td>{{this.code}}</td></tr>
+            <tr><th>Name:</th><td>{{this.name}}</td></tr>
+            <tr><th>Intructor:</th><td>{{this.instructor}}</td></tr>
+            <tr><th>Capacity:</th>
+                <td>
+                    <select id="capacitySelect" data-course-code="{{this.code}}">
+                        {{#each @root.capRange}}
+                            {{#ifEquals this @root.cap}}
+                                <option value="{{this}}" selected>{{this}}</option>
+                            {{else}}
+                                <option value="{{this}}">{{this}}</option>
+                            {{/ifEquals}}
+                        {{/each}}
+                    </select>
+                    <button id="updateButton" class="button" style="display:none;" onclick="updateCapacity()">Update</button>
+                </td>
+            </tr>
+        {{/each}}
+    </table>
+    <br>
+
+    <script src="/static/cap.js"></script>
+</body>

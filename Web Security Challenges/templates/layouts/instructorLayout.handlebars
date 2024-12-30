@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - www.codingnepalweb.com -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{title}}</title>
+  <!-- Linking Unicons For Icons -->
+  <link rel="stylesheet" href="/static/min.css">
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body class="sidebar-hidden">
+  <div class="container">
+    <!-- Header / Navbar -->
+    <header>
+      <nav class="navbar" style="background-color:#e7f2fd;">
+        <div class="nav-section nav-left">
+          <button class="nav-button menu-button">
+            <i>&#9776;</i>
+          </button>
+          <a href="#" class="nav-logo"> 
+            <h2 class="logo-text">University Management System</h2>
+          </a>
+        </div>
+        
+        
+        <div class="nav-section nav-right">
+        <button style="padding: 0 1.25rem; height: 40px; background-color: #99bddc; color: #2f4e73; cursor: pointer;border:none;">
+        <a style="text-decoration: none;" href="/logout">Logout</a>
+        </button>
+        </div>
+      </nav>
+    </header>
+    
+    <!-- Main Layout -->
+    <main class="main-layout">
+      <div class="screen-overlay"></div>
+
+      <!-- Sidebar -->
+      <aside class="sidebar" style="background-color:#e7f2fd;">
+        <div class="nav-section nav-left">
+          <button class="nav-button menu-button">
+          </button>
+          <a href="#" class="nav-logo">
+            <h2 class="logo-text"UMS</h2>
+          </a>
+        </div>
+  
+        <div class="links-container">
+          <div class="link-section">
+            <a href="/instructor" class="link-item"> Home </a>
+          </div>
+          <div class="link-section">
+            <a href="/instructor/course" class="link-item"> Course List </a>
+          </div>
+          <div class="section-separator"></div>
+          <div class="link-section">
+            <a href="/instructor/changePassword" class="link-item">Change Password</a>
+          </div>
+        </div>
+      </aside>
+  
+      <div class="content-wrapper" style="background-color: #f2f9f8;">
+        {{{body}}}
+      </div>
+    </main>
+  </div>
+
+  <!-- Linking custom script -->
+  <script src="/static/style.js"></script>
+</body>
+</html>
