@@ -41,10 +41,7 @@ The source code for the application is located in the `src/main` folder. Develop
 To run the application:
 - **Java Runtime Environment (JRE)** for `phishing_app.jar`
 - **Windows OS** for `phishing_app.exe`
-
-## Contact
-For any issues or queries, feel free to contact the developer or open an issue in the repository.
-
+  
 ---
 
 Good luck, and may your phishing detection skills improve!
